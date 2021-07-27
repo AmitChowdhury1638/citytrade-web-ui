@@ -1,0 +1,58 @@
+[
+    {
+       "id":1,
+       "name":"Abhay",
+       "contactNumber": 7466553724,
+       "email": "test.yy@gmail.com",
+       "type": "Admin"
+    },
+    {
+       "id":2,
+       "name":"Anubhav",
+       "contactNumber": 7466553724,
+       "email": "test.yy@gmail.com",
+       "type": "Vendor"
+    },
+    {
+       "id":3,
+       "name":"Milind",
+       "contactNumber": 7466553724,
+       "email": "test.yy@gmail.com",
+       "type": "Marketing Person"
+    },
+    {
+       "id":4,
+       "name":"Archana",
+       "contactNumber": 7466553724,
+       "email": "test.yy@gmail.com",
+       "type": "Vendor"
+    },
+    {
+      "id":5,
+      "name":"Rakesh",
+      "contactNumber": 7466553724,
+      "email": "test.yy@gmail.com",
+      "type": "Customer"
+   },
+   {
+      "id":6,
+      "name":"Abhinav",
+      "contactNumber": 7466553724,
+      "email": "test.yy@gmail.com",
+      "type": "Customer"
+   },
+   {
+      "id":7,
+      "name":"Raj",
+      "contactNumber": 7466553724,
+      "email": "test.yy@gmail.com",
+      "type": "Customer"
+   },
+   {
+      "id":8,
+      "name":"Simran",
+      "contactNumber": 7466553724,
+      "email": "test.yy@gmail.com",
+      "type": "Customer"
+   }
+ ]

@@ -10,10 +10,10 @@
         </div>
         <div class="ui-inputgroup row">
             <div>
-                <input type="text" formControlName="phoneNumber" size="30" pInputText placeholder="Phone Number">
+                <input type="text" formControlName="contactNumber" size="30" pInputText placeholder="Contact Number">
             </div> 
-            <span *ngIf="phoneNumber?.invalid && (phoneNumber?.dirty || phoneNumber?.touched)" class="alert alert-danger">
-                <span class="mandatory" *ngIf="phoneNumber?.errors?.required">Phone Number is required.</span>
+            <span *ngIf="contactNumber?.invalid && (contactNumber?.dirty || contactNumber?.touched)" class="alert alert-danger">
+                <span class="mandatory" *ngIf="contactNumber?.errors?.required">Contact Number is required.</span>
             </span>
         </div>
         <div class="ui-inputgroup row">
@@ -24,7 +24,14 @@
                 <span class="mandatory" *ngIf="email?.errors?.required">Email is required.</span>
             </span>
         </div>
-        
+        <div class="ui-inputgroup row">
+            <div>
+                <input type="text" formControlName="type" size="30" pInputText placeholder="Type">
+            </div> 
+            <span *ngIf="type?.invalid && (type?.dirty || type?.touched)" class="alert alert-danger">
+                <span class="mandatory" *ngIf="type?.errors?.required">Type is required.</span>
+            </span>
+        </div>
         <div class="ui-inputgroup button">
             <button pButton class="ui-button-add" label="Save"></button> 
         </div>

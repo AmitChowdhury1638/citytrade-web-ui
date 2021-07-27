@@ -1,18 +1,22 @@
 [
     {
        "id":1,
-       "name":"Cash On Delivery"
+       "openTime":"10:00 AM",
+       "closeTime":"2:00 PM"
     },
     {
        "id":2,
-       "name":"Credit Card"
+       "openTime":"5:00 PM",
+       "closeTime":"9:00 PM"
     },
     {
        "id":3,
-       "name":"Debit Card"
+       "openTime":"10:00 AM",
+       "closeTime":"1:00 PM"
     },
     {
        "id":4,
-       "name":"Meal Card"
+       "openTime":"5:00 PM",
+       "closeTime":"10:00 PM"
     }
  ]

@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-add-vendor',
-  templateUrl: './add-vendor.component.html',
-  styleUrls: ['./add-vendor.component.css']
+  selector: 'app-add-user',
+  templateUrl: './add-user.component.html',
+  styleUrls: ['./add-user.component.css']
 })
-export class AddVendorComponent implements OnInit {
+export class AddUserComponent implements OnInit {
 
   constructor() { }
 
@@ -15,11 +15,12 @@ export class AddVendorComponent implements OnInit {
   ngOnInit(): void {
     this.form = new FormGroup({
       name: new FormControl('', Validators.required),
-      phoneNumber: new FormControl('', [Validators.required, 
+      contactNumber: new FormControl('', [Validators.required, 
                                         Validators.maxLength(10), 
                                         Validators.minLength(10)]),
       email: new FormControl('', [Validators.required, 
-                                  Validators.email])
+                                  Validators.email]),
+      type: new FormControl('', Validators.required)
     })
   }
 
@@ -27,12 +28,16 @@ export class AddVendorComponent implements OnInit {
     return this.form.get('name');
   }
 
-  get phoneNumber() {
-    return this.form.get('phoneNumber');
+  get contactNumber() {
+    return this.form.get('contactNumber');
   }
 
   get email() {
     return this.form.get('email');
+  }
+
+  get type() {
+    return this.form.get('type');
   }
 
   onSubmit() {

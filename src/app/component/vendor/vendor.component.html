@@ -6,7 +6,9 @@
         <ng-template pTemplate="header">
             <tr>
                 <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon></th>
-                <th pSortableColumn="name">Category<p-sortIcon field="name"></p-sortIcon></th>
+                <th pSortableColumn="categories">Category<p-sortIcon field="categories"></p-sortIcon></th>
+                <th pSortableColumn="phoneNumber">Phone Number<p-sortIcon field="phoneNumber"></p-sortIcon></th>
+                <th pSortableColumn="email">Email<p-sortIcon field="email"></p-sortIcon></th>
                 <th></th>
             </tr>
         </ng-template>
@@ -23,12 +25,25 @@
                     </p-cellEditor>
                 </td>
                 <td>
+                    <p-dropdown [options]="categories" [(ngModel)]="selectedCategory" optionLabel="name"></p-dropdown>
+                </td>
+                <td>
                     <p-cellEditor>
                         <ng-template pTemplate="input">
-                            <input pInputText type="text" [(ngModel)]="rowData.name">
+                            <input pInputText type="text" [(ngModel)]="rowData.phoneNumber">
                         </ng-template>
                         <ng-template pTemplate="output">
-                            {{rowData.name}}
+                            {{rowData.phoneNumber}}
+                        </ng-template>
+                    </p-cellEditor>
+                </td>
+                <td>
+                    <p-cellEditor>
+                        <ng-template pTemplate="input">
+                            <input pInputText type="text" [(ngModel)]="rowData.email">
+                        </ng-template>
+                        <ng-template pTemplate="output">
+                            {{rowData.email}}
                         </ng-template>
                     </p-cellEditor>
                 </td>

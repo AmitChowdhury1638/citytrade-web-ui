@@ -14,12 +14,18 @@ export class AddTimeSlotComponent implements OnInit {
   
   ngOnInit(): void {
     this.form = new FormGroup({
-      name: new FormControl('', Validators.required),
+      openTime: new FormControl('', Validators.required),
+      closeTime: new FormControl('', Validators.required),
+      vendor: new FormControl('')
     })
   }
 
-  get name() {
-    return this.form.get('name');
+  get openTime() {
+    return this.form.get('openTime');
+  }
+
+  get closeTime() {
+    return this.form.get('closeTime');
   }
 
   onSubmit() {

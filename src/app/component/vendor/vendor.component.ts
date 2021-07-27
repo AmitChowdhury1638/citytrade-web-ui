@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DialogService } from 'primeng/dynamicdialog';
 import * as data from 'src/app/vendor.json';
-import * as category from 'src/app/category.json';
 import { AddVendorComponent } from '../add-vendor/add-vendor.component';
+import * as category from 'src/app/category.json';
+import { Category } from 'src/app/category';
 
 @Component({
   selector: 'app-vendor',
@@ -13,12 +14,13 @@ export class VendorComponent implements OnInit {
 
   constructor(public dialogService: DialogService) { }
 
+  ngOnInit(): void {
+  }
+
   editEnabled = false;
   data: any = (data as any).default;
   categories: any = (category as any).default;
-
-  ngOnInit(): void {
-  }
+  selectedCategory!: Category;
 
   onRowEditInit(customer: any, index: number) {
     console.log(index);

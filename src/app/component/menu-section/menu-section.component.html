@@ -6,6 +6,7 @@
         <ng-template pTemplate="header">
             <tr>
                 <th pSortableColumn="name">Name<p-sortIcon field="name"></p-sortIcon></th>
+                <th pSortableColumn="categories">Category<p-sortIcon field="categories"></p-sortIcon></th>
                 <th></th>
             </tr>
         </ng-template>
@@ -20,6 +21,9 @@
                             {{rowData.name}}
                         </ng-template>
                     </p-cellEditor>
+                </td>
+                <td>
+                    <p-dropdown [options]="categories" [(ngModel)]="selectedCategory" optionLabel="name"></p-dropdown>
                 </td>
                 <td style="text-align:center">
                     <button *ngIf="!editing && !editEnabled" pButton type="button" pInitEditableRow icon="pi pi-pencil"

@@ -43,6 +43,8 @@ import { ItemComponent } from './component/item/item.component';
 import { MenuSectionComponent } from './component/menu-section/menu-section.component';
 import { VendorFilterComponent } from './component/vendor-filter/vendor-filter.component';
 import { AbstractComponent } from './component/abstract/abstract.component';
+import { UserComponent } from './component/user/user.component';
+import { AddUserComponent } from './component/add-user/add-user.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,9 @@ import { AbstractComponent } from './component/abstract/abstract.component';
     ItemComponent,
     MenuSectionComponent,
     VendorFilterComponent,
-    AbstractComponent
+    AbstractComponent,
+    UserComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,

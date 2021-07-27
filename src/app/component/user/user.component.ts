@@ -1,16 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { AddTimeSlotComponent } from '../add-time-slot/add-time-slot.component';
-import * as data from 'src/app/time-slot.json';
+import * as data from 'src/app/user.json';
+import { AddUserComponent } from '../add-user/add-user.component';
 import { DialogService } from 'primeng/dynamicdialog';
-import * as vendor from 'src/app/vendor.json';
-import { Vendor } from 'src/app/vendor';
 
 @Component({
-  selector: 'app-time-slot',
-  templateUrl: './time-slot.component.html',
-  styleUrls: ['./time-slot.component.css']
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
 })
-export class TimeSlotComponent implements OnInit {
+export class UserComponent implements OnInit {
 
   constructor(public dialogService: DialogService) { }
 
@@ -19,8 +17,6 @@ export class TimeSlotComponent implements OnInit {
 
   editEnabled = false;
   data: any = (data as any).default;
-  vendors: any = (vendor as any).default;
-  selectedVendor!: Vendor;
 
   onRowEditInit(customer: any, index: number) {
     console.log(index);
@@ -41,8 +37,8 @@ export class TimeSlotComponent implements OnInit {
   }
 
   show() {
-    const ref = this.dialogService.open(AddTimeSlotComponent, {
-        header: 'Add Timeslot',
+    const ref = this.dialogService.open(AddUserComponent, {
+        header: 'Add User',
         width: '21%'
     });
   }

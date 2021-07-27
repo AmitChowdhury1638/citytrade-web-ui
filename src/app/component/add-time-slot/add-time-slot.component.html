@@ -2,13 +2,20 @@
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <div class="ui-inputgroup row">
             <div>
-                <input type="text" formControlName="name" size="30" pInputText placeholder="Payment Method">
+                <input type="text" formControlName="openTime" size="30" pInputText placeholder="Open Time">
             </div> 
-            <span *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="alert alert-danger">
-                <span class="mandatory" *ngIf="name?.errors?.required">Payment Method is required.</span>
+            <span *ngIf="openTime?.invalid && (openTime?.dirty || openTime?.touched)" class="alert alert-danger">
+                <span class="mandatory" *ngIf="openTime?.errors?.required">Open Time is required.</span>
             </span>
         </div>
-        
+        <div class="ui-inputgroup row">
+            <div>
+                <input type="text" formControlName="closeTime" size="30" pInputText placeholder="Close Time">
+            </div> 
+            <span *ngIf="closeTime?.invalid && (closeTime?.dirty || closeTime?.touched)" class="alert alert-danger">
+                <span class="mandatory" *ngIf="closeTime?.errors?.required">Close Time is required.</span>
+            </span>
+        </div>
         <div class="ui-inputgroup button">
             <button pButton class="ui-button-add" label="Save"></button> 
         </div>

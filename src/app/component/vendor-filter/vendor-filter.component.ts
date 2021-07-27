@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AddVendorComponent } from '../add-vendor/add-vendor.component';
 import * as data from 'src/app/vendor-filter.json';
 import { DialogService } from 'primeng/dynamicdialog';
+import * as category from 'src/app/category.json';
+import { Category } from 'src/app/category';
 
 @Component({
   selector: 'app-vendor-filter',
@@ -12,6 +14,8 @@ export class VendorFilterComponent implements OnInit {
 
   editEnabled = false;
   data: any = (data as any).default;
+  categories: any = (category as any).default;
+  selectedCategory!: Category;
 
   constructor(public dialogService: DialogService) { }
 

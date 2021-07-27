@@ -12,6 +12,7 @@ import { MenuSectionComponent } from './component/menu-section/menu-section.comp
 import { ItemComponent } from './component/item/item.component';
 import { FeatureComponent } from './component/feature/feature.component';
 import { TimeSlotComponent } from './component/time-slot/time-slot.component';
+import { UserComponent } from './component/user/user.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
           children: [
             {path: 'home', component: HomeComponent},
             {path: 'categories', component: CategoryComponent},
-            {path: 'vendors', component:VendorComponent}
+            {path: 'vendors', component:VendorComponent},
+            {path: 'users', component:UserComponent}
           ]
       },
       {
