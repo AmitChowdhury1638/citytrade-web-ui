@@ -1,0 +1,26 @@
+[
+    {
+       "id":1,
+       "name":"Punjabi Dhaba"
+    },
+    {
+       "id":2,
+       "name":"Puja Garments"
+    },
+    {
+       "id":3,
+       "name":"Lakhi Pan Shop"
+    },
+    {
+       "id":4,
+       "name":"Pizza Hut"
+    },
+    {
+      "id":5,
+      "name":"R K Wine Shop"
+   },
+   {
+      "id":6,
+      "name":"Harshad Coaching Center"
+   }
+ ]

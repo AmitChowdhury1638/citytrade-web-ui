@@ -1,0 +1,19 @@
+<div>
+        <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()">
+            <div class="ui-inputgroup row">
+                <div>
+                    <input type="text" formControlName="name" size="30" pInputText placeholder="Category Name">
+                </div> 
+                <span *ngIf="name?.invalid && (name?.dirty || name?.touched)" class="alert alert-danger">
+                    <span class="mandatory" *ngIf="name?.errors?.required">Category Name is required.</span>
+                </span>
+            </div>
+            
+            <div class="ui-inputgroup row">
+                <input type="text" formControlName="filterHeading" size="30" pInputText placeholder="Heading">  
+            </div>
+            <div class="ui-inputgroup button">
+                <button pButton class="ui-button-add" label="Save"></button> 
+            </div>
+        </form>
+    </div>
