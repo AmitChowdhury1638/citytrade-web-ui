@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as data from 'src/app/user.json';
 import { AddUserComponent } from '../add-user/add-user.component';
 import { DialogService } from 'primeng/dynamicdialog';
+import { FilterService } from 'primeng/api';
 
 @Component({
   selector: 'app-user',
@@ -10,11 +11,13 @@ import { DialogService } from 'primeng/dynamicdialog';
 })
 export class UserComponent implements OnInit {
 
-  constructor(public dialogService: DialogService) { }
+  constructor(public dialogService: DialogService,
+              private filterService: FilterService) { }
 
   ngOnInit(): void {
   }
 
+  
   editEnabled = false;
   data: any = (data as any).default;
 

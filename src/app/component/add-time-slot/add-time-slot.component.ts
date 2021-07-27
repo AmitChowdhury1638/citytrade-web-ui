@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import * as vendor from 'src/app/vendor.json';
+import { Vendor } from 'src/app/vendor';
 
 @Component({
   selector: 'app-add-time-slot',
@@ -11,6 +13,8 @@ export class AddTimeSlotComponent implements OnInit {
   constructor() { }
 
   form!: FormGroup;
+  vendors: any = (vendor as any).default;
+  selectedVendor!: Vendor;
   
   ngOnInit(): void {
     this.form = new FormGroup({

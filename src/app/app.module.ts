@@ -45,6 +45,7 @@ import { VendorFilterComponent } from './component/vendor-filter/vendor-filter.c
 import { AbstractComponent } from './component/abstract/abstract.component';
 import { UserComponent } from './component/user/user.component';
 import { AddUserComponent } from './component/add-user/add-user.component';
+import {FilterService} from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -98,7 +99,8 @@ import { AddUserComponent } from './component/add-user/add-user.component';
     MenuModule
   ],
   providers: [
-    DialogService
+    DialogService,
+    FilterService
   ],
   bootstrap: [AppComponent]
 })
