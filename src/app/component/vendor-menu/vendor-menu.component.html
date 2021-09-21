@@ -1,5 +1,5 @@
-<div>
-    <div style="width: 15%; float: left; height: 580px; background: rgb(245, 244, 244);">
+<div class="grid">
+    <div class="col-4 sm:col-4 md:col-3 lg:col-2">
         <ul>
             <li><a routerLink="vendor-filters">VENDOR FILTER</a></li>
             <li><a routerLink="menu-sections">MENU SECTION</a></li>
@@ -9,7 +9,7 @@
             <li><a routerLink="time-slots">TIME SLOT</a></li>
         </ul>
     </div>
-    <div style="width: 85%; float: left;">
+    <div class="col-8 sm:col-8 md:col-9 lg:col-10">
         <router-outlet></router-outlet>
     </div>
 </div>

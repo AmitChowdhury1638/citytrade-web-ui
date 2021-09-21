@@ -39,7 +39,7 @@ export class PaymentComponent implements OnInit {
   show() {
     const ref = this.dialogService.open(AddPaymentComponent, {
         header: 'Add Payment Method',
-        width: '21%'
+        width: '350px'
     });
   }
 

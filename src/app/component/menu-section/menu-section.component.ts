@@ -43,7 +43,7 @@ export class MenuSectionComponent implements OnInit {
   show() {
     const ref = this.dialogService.open(AddMenuSectionComponent, {
         header: 'Add Menu Section',
-        width: '21%'
+        width: '350px'
     });
   }
 

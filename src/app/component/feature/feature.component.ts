@@ -43,7 +43,7 @@ export class FeatureComponent implements OnInit {
   show() {
     const ref = this.dialogService.open(AddFeatureComponent, {
         header: 'Add Feature',
-        width: '21%'
+        width: '350px'
     });
   }
 

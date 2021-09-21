@@ -43,7 +43,7 @@ export class TimeSlotComponent implements OnInit {
   show() {
     const ref = this.dialogService.open(AddTimeSlotComponent, {
         header: 'Add Timeslot',
-        width: '21%'
+        width: '350px'
     });
   }
 

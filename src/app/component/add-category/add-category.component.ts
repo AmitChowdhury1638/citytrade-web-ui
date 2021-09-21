@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { CategoryService } from 'src/app/service/category/category.service';
 
 @Component({
   selector: 'app-add-category',
@@ -8,9 +10,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class AddCategoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: CategoryService) { }
 
   categoryForm!: FormGroup;
+  submitted = false;
 
   ngOnInit(): void {
     this.categoryForm = new FormGroup({
@@ -28,7 +31,14 @@ export class AddCategoryComponent implements OnInit {
   }
 
   onSubmit() {
-    
+    console.log(this.categoryForm.value);
+    this.submitted = true;
+    if (this.categoryForm.invalid) {
+      return;
+    }
+    this.service.createCategory(this.categoryForm.value).subscribe(data=>{
+      console.log(data);
+    });
   }
 
 }

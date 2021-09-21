@@ -42,7 +42,7 @@ export class UserComponent implements OnInit {
   show() {
     const ref = this.dialogService.open(AddUserComponent, {
         header: 'Add User',
-        width: '21%'
+        width: '350px'
     });
   }
 

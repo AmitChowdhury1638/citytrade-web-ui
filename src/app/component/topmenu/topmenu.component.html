@@ -1,15 +1,29 @@
 <div style="background: #e0e6f0;">
     <img alt="My image name" src="./assets/citytrade1.jpg" height="75px;" style="vertical-align: middle;">
-    <span style="font-size: xx-large;font-weight: bold; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+    <span style="font-size: x-large;font-weight: bold; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
         CITY TRADE ADMIN PORTAL
     </span>
 </div>
-<div>
-    <ul>
-        <!-- <li><a routerLink="admin-menu/home"><i class="pi pi-home"></i></a></li> -->
-        <li><a routerLink="admin-menu/home">ADMINISTRATION</a></li>
-        <li><a routerLink="vendor-menu/home">VENDOR MENU</a></li>
-        <li style="float:right"><a class="logout" href="#about"><i class="pi pi-power-off"></i></a></li>
-      </ul>
+<div class="topmenu">
+    <div class="dropdown">
+        <button class="dropbtn">ADMINISTRATION</button>
+        <div class="dropdown-content">
+            <a routerLink="categories">CATEGORY</a>
+            <a routerLink="vendors">VENDOR</a>
+            <a routerLink="users">USER</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">VENDOR MENU</button>
+        <div class="dropdown-content">
+            <a routerLink="vendor-filters">VENDOR FILTER</a>
+            <a routerLink="menu-sections">MENU SECTION</a>
+            <a routerLink="items">ITEM</a>
+            <a routerLink="payments">PAYMENT METHOD</a>
+            <a routerLink="features">FEATURE</a>
+            <a routerLink="time-slots">TIME SLOT</a>
+        </div>
+      </div>
+      <button class="contact"><a routerLink="contactus">CONTACT US</a></button>
 </div>
 <router-outlet></router-outlet>

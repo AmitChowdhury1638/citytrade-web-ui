@@ -43,7 +43,7 @@ export class VendorComponent implements OnInit {
   show() {
     const ref = this.dialogService.open(AddVendorComponent, {
         header: 'Add Vendor',
-        width: '21%'
+        width: '350px'
     });
   }
 

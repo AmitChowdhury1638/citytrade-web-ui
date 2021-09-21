@@ -43,7 +43,7 @@ export class ItemComponent implements OnInit {
   show() {
     const ref = this.dialogService.open(AddItemComponent, {
         header: 'Add Item',
-        width: '21%'
+        width: '350px'
     });
   }
 
